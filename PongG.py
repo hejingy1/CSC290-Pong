@@ -72,11 +72,16 @@ class Paddle:
 while run:
     pygame.time.delay(10)
     pygame.display.update()
+    #keeping the loop running until the game is closed
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
+
     keys = pygame.key.get_pressed()
 
+    #trying out different value to put into the code
+    #test different case and demonstrate how the game will be hehave like
+    #codes that helps teammates to build their individual class
     if keys[pygame.K_w] and player1y>=0:
         player1y-=speedy
     if keys[pygame.K_s] and player1y<=600:
@@ -89,11 +94,13 @@ while run:
         player2y+=speedy
 
     win.fill((0,0,0))
+    #construct the all three objects that can be use
     pygame.draw.rect(win,(255,255,255),(player1x,player1y,width,height))
     pygame.draw.rect(win, (255, 255, 255), (player2x, player2y, width, height))
     pygame.draw.circle(win, (255, 0, 0), (ballx, bally),10)
     bally += ballSpeedy
     ballx += ballSpeedx
+    #testing boundaries
     if bally>=690:
         ballSpeedy=ballSpeedy*-1
     if bally<=10:
