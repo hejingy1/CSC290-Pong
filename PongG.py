@@ -18,7 +18,56 @@ height = 100
 speedy = 5
 vel = 5
 
+
+screen_h = 500
+screen_w = 700
+
+
 run = True
+
+
+class Paddle:
+
+    """A paddle for Pong.
+
+    === Attributes ===
+    key1: either pygame.K_UP or pygame.K_w
+    key2: either pygame.K_DOWN or pygame.K_s
+    speed: speed of this paddle
+    x_loc: the x coordinate of this paddle
+    y_loc: the y coordinate of this paddle
+    w: width of this paddle
+    h: height of this paddle
+
+    """
+
+    paddle_w = 10
+    paddle_h = 100
+
+    def __init__(self, key1, key2):
+        """Creates a paddle
+        """
+        self.key1 = key1
+        self.key2 = key2
+        self.speed = 5
+        self.x_loc = screen_w - paddle_w
+        self.y_loc = screen_h/2 - paddle_h/2
+        self.w = paddle_w
+        self.h = paddle_h
+
+    def move(self):
+        """Moves the paddle
+        """
+        if pygame.key.get_pressed()[self.key1]:  # up/w key
+            if self.y_loc - self.speed > 0:
+                self.y_loc -= self.speed
+
+        elif pygame.key.get_pressed()[self.key2]:  # down/s key
+            if self.y_loc + self.speed < screen_h - self.h:
+                self.y_loc += self.speed
+
+
+
 
 while run:
     pygame.time.delay(10)
