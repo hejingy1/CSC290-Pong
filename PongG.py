@@ -66,7 +66,33 @@ class Paddle:
             if self.y_loc + self.speed < screen_h - self.h:
                 self.y_loc += self.speed
 
+class Ball:
 
+    """A paddle for Pong.
+
+    === Attributes ===
+    key1: either pygame.K_UP or pygame.K_w
+    key2: either pygame.K_DOWN or pygame.K_s
+    speed: speed of this paddle
+    x_loc: the x coordinate of this paddle
+    y_loc: the y coordinate of this paddle
+    w: width of this paddle
+    h: height of this paddle
+
+    """
+
+    def __init__(self):
+        """Creates a ball
+        """
+        self.xcoor = 650
+        self.ycoor = 350
+        self.speed = 1
+
+    def move(self, xdir, ydir):
+        """Moves the ball
+        """
+        self.xcoor += self.speed * xdir
+        self.ycoor += self.speed * ydir
 
 
 while run:
