@@ -26,6 +26,39 @@ screen_w = 700
 run = True
 
 
+#class of setups
+class design():
+    def __init__():
+        
+    def screen():
+        #screen size
+        d_w = 700
+        d_h = 500
+        
+        #setup the color
+        w = (200, 200, 200)
+        b = (0, 0, 0)
+        #brighter color
+        b_w = (255, 255, 255)
+
+        #setup the starting screen
+        screen = pygame.display.set_mode([d_w, d_h])
+        screen.fill(b)
+        game.display.set_caption('Pong')
+
+        #setup the buttons
+        mouse = pygame.mouse.get_pos()
+        if d_w / 2 < mouse[0] < d_w / 2 + 100 and d_h - 100 < mouse[1] < d_h - 75:
+            pygame.draw.rect(gameDisplay, s_w, (d_w / 2, d_h - 100, 100, 25))
+        else:
+            pygame.draw.rect(gameDisplay, w, (d_w / 2, d_h - 100, 100, 25))
+        if d_w / 2 < mouse[0] < d_w / 2 + 100 and d_h - 250 < mouse[1] < d_h - 225:
+            pygame.draw.rect(gameDisplay, s_w, (d_w / 2, d_h - 100, 100, 25))
+        else:
+            pygame.draw.rect(gameDisplay, w, (d_w / 2, d_h - 100, 100, 25))
+        font = pygame.font.Font('freesansbold.ttf', 50)
+
+
 class Paddle:
 
     """A paddle for Pong.
