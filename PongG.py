@@ -101,16 +101,12 @@ class Paddle:
 
 class Ball:
 
-    """A paddle for Pong.
+    """A ball for Pong.
 
     === Attributes ===
-    key1: either pygame.K_UP or pygame.K_w
-    key2: either pygame.K_DOWN or pygame.K_s
-    speed: speed of this paddle
-    x_loc: the x coordinate of this paddle
-    y_loc: the y coordinate of this paddle
-    w: width of this paddle
-    h: height of this paddle
+    speed: speed of this ball
+    xcoor: the x coordinate of this paddle
+    ycoor: the y coordinate of this paddle
 
     """
 
