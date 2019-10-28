@@ -105,8 +105,8 @@ class Ball:
 
     === Attributes ===
     speed: speed of this ball
-    xcoor: the x coordinate of this paddle
-    ycoor: the y coordinate of this paddle
+    xcoor: the x coordinate of this ball
+    ycoor: the y coordinate of this ball
 
     """
 
