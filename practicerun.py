@@ -1,14 +1,12 @@
 import pygame
+
 pygame.init()
 
-win = pygame.display.set_mode((1300,700))
+win = pygame.display.set_mode((1300, 700))
 
 pygame.display.set_caption("Pong")
 
-player1x = 0
-player1y = 300
-player2x = 1280
-player2y = 300
+
 ballx = 650
 bally = 350
 ballSpeedy = 3
@@ -16,43 +14,44 @@ ballSpeedx = 3
 width = 20
 height = 100
 speedy = 5
-vel = 5
 
 
 screen_h = 500
 screen_w = 700
 
-
 run = True
 
 
-#class of setups
+# class of setups
 class Design:
-    def __init__():
+    def __init__(self):
+        pass
 
-    def screen():
-        #screen size
+    def screen(self):
+        # screen size
         d_w = 700
         d_h = 500
 
-        #setup the color
+        # setup the color
         w = (200, 200, 200)
         b = (0, 0, 0)
-        #brighter color
+        # brighter color
         b_w = (255, 255, 255)
 
-        #setup the starting screen
+        # setup the starting screen
         screen = pygame.display.set_mode([d_w, d_h])
         screen.fill(b)
         game.display.set_caption('Pong')
 
-        #setup the buttons
+        # setup the buttons
         mouse = pygame.mouse.get_pos()
-        if d_w / 2 < mouse[0] < d_w / 2 + 100 and d_h - 100 < mouse[1] < d_h - 75:
+        if d_w / 2 < mouse[0] < d_w / 2 + 100 and d_h - 100 < mouse[
+            1] < d_h - 75:
             pygame.draw.rect(gameDisplay, s_w, (d_w / 2, d_h - 100, 100, 25))
         else:
             pygame.draw.rect(gameDisplay, w, (d_w / 2, d_h - 100, 100, 25))
-        if d_w / 2 < mouse[0] < d_w / 2 + 100 and d_h - 250 < mouse[1] < d_h - 225:
+        if d_w / 2 < mouse[0] < d_w / 2 + 100 and d_h - 250 < mouse[
+            1] < d_h - 225:
             pygame.draw.rect(gameDisplay, s_w, (d_w / 2, d_h - 100, 100, 25))
         else:
             pygame.draw.rect(gameDisplay, w, (d_w / 2, d_h - 100, 100, 25))
@@ -87,7 +86,6 @@ class Paddle():
             self.y += speedy
 
 class Ball:
-
     """A ball for Pong.
 
     === Attributes ===
@@ -100,7 +98,7 @@ class Ball:
     def __init__(self):
         """Creates a ball
         """
-        self.xcoor = 650
+        self.xcoor = 250
         self.ycoor = 350
         self.speed = 1
 
@@ -116,20 +114,13 @@ run = True
 player1 = Paddle(pygame.K_w, pygame.K_s, 0, 300)
 player2 = Paddle(pygame.K_UP, pygame.K_DOWN, 680, 300)
 
-
 while run:
     pygame.time.delay(10)
     pygame.display.update()
-    #keeping the loop running until the game is closed
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
 
-    keys = pygame.key.get_pressed()
-
-    #trying out different value to put into the code
-    #test different case and demonstrate how the game will be hehave like
-    #codes that helps teammates to build their individual class
     keys = pygame.key.get_pressed()
 
     if keys[pygame.K_w] or keys[pygame.K_s]:
@@ -140,23 +131,8 @@ while run:
 
     win.fill((0, 0, 0))
     # construct the all three objects that can be use
-    pygame.draw.rect(win, (255, 255, 255),
-                     (player1.x, player1.y, width, height))
-    pygame.draw.rect(win, (255, 255, 255),
-                     (player2.x, player2.y, width, height))
-
-    pygame.draw.circle(win, (255, 0, 0), (ballx, bally),10)
-    bally += ballSpeedy
-    ballx += ballSpeedx
-    #testing boundaries
-    if bally>=690:
-        ballSpeedy=ballSpeedy*-1
-    if bally<=10:
-        ballSpeedy=ballSpeedy*-1
-
-    if ballx>=player2x+10:
-        ballSpeedx = ballSpeedx*-1
-
-
+    pygame.draw.rect(win, (255, 255, 255), (player1.x, player1.y, width, height))
+    pygame.draw.rect(win, (255, 255, 255), (player2.x, player2.y, width, height))
+    pygame.draw.circle(win, (255, 0, 0), (ballx, bally), 10)
 
 pygame.quit()
