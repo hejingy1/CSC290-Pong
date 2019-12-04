@@ -74,14 +74,6 @@ while run:
     if ballx<15 and ballx>-5 and bally>player1y and bally<player1y+100:
         ballSpeedx = ballSpeedx*-1
 
-    #if (ballx>1300-30 and ballx<1300) and (bally >player1y and bally < player1y+100):
-        #ballSpeedy = ballSpeedy*-1
-        #ballSpeedx = ballSpeedx*-1
-
-    #if (ballx<0+30 and ballx>0) and (bally >player2y and bally < player2y+100):
-        #ballSpeedy = ballSpeedy*-1
-        #ballSpeedx = ballSpeedx*-1
-
     if ballx<-10:
         player2=player2+1
         ballx = 650
