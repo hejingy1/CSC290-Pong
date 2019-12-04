@@ -2,7 +2,7 @@ import pygame
 
 pygame.init()
 
-win = pygame.display.set_mode((1300, 700))
+# win = pygame.display.set_mode((1300, 700))
 
 pygame.display.set_caption("Pong")
 
@@ -77,13 +77,18 @@ class Paddle():
         self.y = ypos
 
     def move(self):
+        """
+        Moves the paddle up or down.
+
+        """
         key = pygame.key.get_pressed()
 
         if key[self.key1] and self.y >= 0:
             self.y -= speedy
 
-        if key[self.key2] and self.y <= 500:
+        if key[self.key2] and self.y <= 400:
             self.y += speedy
+
 
 class Ball:
     """A ball for Pong.
