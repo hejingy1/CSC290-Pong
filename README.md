@@ -9,5 +9,6 @@
 5. [Authors] (#us)
 6. [License] (#mit)
 
-## Description
-<a name="description"></a>
+## Liscense
+<a name="Liscense"></a>
+A copy of our liscense can be found as a seperate file in our repository.
