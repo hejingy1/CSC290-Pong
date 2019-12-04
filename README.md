@@ -2,12 +2,12 @@
 
 ## Navigation
 <a name="top"></a>
-1. [Description of the Game] (#description)
-2. [How to Install] (#installation)
-3. [How to Play] (#play)
-4. [Documentation] (#structure)
-5. [Authors] (#us)
-6. [License] (#mit)
+1. [Description of the Game] 
+2. [How to Install]
+3. [How to Play]
+4. [Documentation] 
+5. [Authors]
+6. [License]
 
 ## Liscense
 <a name="Liscense"></a>
