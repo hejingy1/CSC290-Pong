@@ -29,7 +29,7 @@ This is a two-player Human vs. Human game. The “W” and “S” keys control 
 ## Make Pong Better
 There are several ways to extend this game. You can choose to add different levels of robot players in order to make it harder for the player to win. You can also add different kinds of barriers on the map so that it is harder to bounce the ball back to the opponent's area. Another way you can extend this game is to rotate the player's paddle while they are playing the game, so that it is harder for them to reach the ball.
 
-## Authors and their Contribution
+## Authors and their Contributions
 <a name="contribution"></a>
 **Maham Khan** <br/>
 Some major components of this game are the paddles that are controlled by the players. My contribution to the game was creating the Paddle class that represents these paddles. This class has the initializer that takes in a position on the game screen (for the pddles to be placed) and two keys (s or w, up or down) that will be pressed to move the paddles. I also created a method for moving the paddles up and down. This method determines which key is pressed and moves the paddle accordingly by a certain amount that we specified in the game. For this readme.md, I created the 'Navigation' section and added to it the different components of this file. I also created the 'Liscense' section and a copy of our license. Finally, I created the 'Authors and their Contribution' section.
